@@ -1,0 +1,10 @@
+.*
+metals.sbt
+target/
+
+!.github/
+!.gitattributes
+!.gitignore
+!.sbtopts
+!.scalafix.conf
+!.scalafmt.conf

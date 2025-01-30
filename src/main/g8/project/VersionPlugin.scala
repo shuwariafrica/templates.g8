@@ -21,7 +21,7 @@ object VersionPlugin extends AutoPlugin {
   private def baseVersionSetting(appendMetadata: Boolean): Def.Initialize[String] = {
     def baseVersionFormatter(in: sbtdynver.GitDescribeOutput) = {
       def meta =
-        if (appendMetadata) s"+${in.commitSuffix.distance}.${in.commitSuffix.sha}"
+        if (appendMetadata) s"+\${in.commitSuffix.distance}.\${in.commitSuffix.sha}"
         else ""
 
       if (!in.isSnapshot()) in.ref.dropPrefix
@@ -30,7 +30,7 @@ object VersionPlugin extends AutoPlugin {
           def current = in.ref.dropPrefix.split("\\.").map(_.toInt)
           current.updated(current.length - 1, current.last + 1)
         }
-        s"${parts.mkString(".")}-SNAPSHOT$meta"
+        s"\${parts.mkString(".")}-SNAPSHOT\$meta"
       }
     }
 

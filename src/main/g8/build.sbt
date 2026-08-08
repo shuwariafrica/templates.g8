@@ -1,6 +1,6 @@
 inThisBuild(
   List(
-    scalaVersion := "3.6.3",
+    scalaVersion := "3.6.4",
     organization := "$organisation$",
     description := "$description$",
     homepage := Some(url("https://github.com/shuwarifrica/$name$")),

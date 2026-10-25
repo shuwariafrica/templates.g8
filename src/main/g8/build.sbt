@@ -34,5 +34,5 @@ lazy val `$name;format="snake"$-root` =
 
 
 lazy val libraries = new {
-  val munit = "org.scalameta" %% "munit" % "1.1.0"
+  val munit = "org.scalameta" %% "munit" % "1.1.1"
 }

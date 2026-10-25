@@ -3,7 +3,7 @@ inThisBuild(
     scalaVersion := "3.6.3",
     organization := "$organisation$",
     description := "$description$",
-    homepage := Some(url("https://github.com/shuwarifrica/$name$")),
+    homepage := Some(url("https://github.com/shuwariafrica/$name$")),
     scmInfo := ScmInfo(
       url("https://github.com/shuwariafrica/$name$"),
       "scm:git:https://github.com/shuwariafrica/$name$.git",
@@ -18,7 +18,7 @@ lazy val $name;format="snake"$ =
   project
     .in(file("modules/$name;format="snake"$"))
     .settings(Publishing.project)
-    .dependsOn(libraries.munit % Test)
+    .settings(libraryDependencies += libraries.munit % Test)
     .settings(
       ScalaCompiler.basePackages ++= List("$package$")
     )

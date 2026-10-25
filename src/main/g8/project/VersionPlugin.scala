@@ -27,7 +27,7 @@ object VersionPlugin extends AutoPlugin {
       if (!in.isSnapshot()) in.ref.dropPrefix
       else {
         val parts = {
-          def current = in.ref.dropPrefix.split("\\.").map(_.toInt)
+          def current = in.ref.dropPrefix.split('.').map(_.toInt)
           current.updated(current.length - 1, current.last + 1)
         }
         s"\${parts.mkString(".")}-SNAPSHOT\$meta"
